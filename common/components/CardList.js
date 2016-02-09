@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import { ListGroup } from 'react-bootstrap'
 import Card from './Card';
 
 class CardList extends Component {
@@ -9,7 +10,7 @@ class CardList extends Component {
     }
 
     return (
-      <ul>
+      <ListGroup>
         {cards.map(card =>
           <Card
             key={card.id}
@@ -17,7 +18,7 @@ class CardList extends Component {
             onClick={() => show(card.id)}
           />
         )}
-      </ul>
+      </ListGroup>
     )
   }
 }

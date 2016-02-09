@@ -6,3 +6,7 @@
 .text-italic {
   font-style: italic;
 }
+
+button, a {
+  outline: none;
+}
