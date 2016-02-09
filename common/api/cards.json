@@ -1,0 +1,14 @@
+[
+  {
+    "id": 0,
+    "title": "Card title",
+    "front": "Question text",
+    "back": "Answer text"
+  },
+  {
+    "id": 1,
+    "title": "Second card",
+    "front": "Question text 2",
+    "back": "Answer text 2"
+  }
+]

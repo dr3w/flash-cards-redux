@@ -25,7 +25,7 @@ module.exports = {
         exclude: /node_modules/,
         include: __dirname,
         query: {
-          optional: [ 'runtime' ],
+          optional: ['runtime'],
           stage: 2,
           env: {
             development: {
@@ -36,9 +36,9 @@ module.exports = {
                 'react-transform': {
                   transforms: [
                     {
-                      transform:  'react-transform-hmr',
-                      imports: [ 'react' ],
-                      locals:  [ 'module' ]
+                      transform: 'react-transform-hmr',
+                      imports: ['react'],
+                      locals: ['module']
                     }
                   ]
                 }
@@ -47,11 +47,13 @@ module.exports = {
           }
         }
       },
-      { test: /\.css$/, loader: 'style-loader!css-loader' },
-      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
-      { test: /\.(woff|woff2)$/, loader:"url?prefix=font/&limit=5000" },
-      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream" },
-      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml" }
+      {test: /\.css$/, loader: 'style-loader!css-loader'},
+      {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file"},
+      {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file"},
+      {test: /\.json$/, loader: "json"},
+      {test: /\.(woff|woff2)$/, loader: "url?prefix=font/&limit=5000"},
+      {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream"},
+      {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml"}
     ]
   }
 }
@@ -63,11 +65,11 @@ var reduxNodeModules = path.join(__dirname, '..', '..', 'node_modules')
 var fs = require('fs')
 if (fs.existsSync(reduxSrc) && fs.existsSync(reduxNodeModules)) {
   // Resolve Redux to source
-  module.exports.resolve = { alias: { 'redux': reduxSrc } }
+  module.exports.resolve = {alias: {'redux': reduxSrc}}
   // Compile Redux from source
   module.exports.module.loaders.push({
     test: /\.js$/,
-    loaders: [ 'babel' ],
+    loaders: ['babel'],
     include: reduxSrc
   })
 }
