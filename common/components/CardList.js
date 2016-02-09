@@ -5,6 +5,10 @@ import Card from './Card';
 class CardList extends Component {
   render() {
     const { cards, show } = this.props
+    if (!cards.length) {
+      return ( <div>Loading...</div>)
+    }
+
     return (
       <ul>
         {cards.map(card =>

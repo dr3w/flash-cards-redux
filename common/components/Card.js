@@ -9,4 +9,9 @@ class Card extends Component {
   }
 }
 
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired
+}
+
 export default Card
