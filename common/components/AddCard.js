@@ -27,6 +27,8 @@ class AddCard extends Component {
   render() {
     return (
       <div>
+        // TODO: use textarea for front and back
+
         <form onSubmit={(e) => this.onSubmit(e)}>
           <Input type="text" ref="title" placeholder="Title" required/>
           <Input type="text" ref="front" placeholder="Front"/>

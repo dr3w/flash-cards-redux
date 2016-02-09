@@ -10,3 +10,7 @@
 button, a {
   outline: none;
 }
+
+.card-list {
+  margin-top: 40px;
+}
