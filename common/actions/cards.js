@@ -3,10 +3,10 @@ export const ADD_CARD = 'ADD_CARD'
 export const SHOW_CARD = 'SHOW_CARD'
 export const RECEIVE_CARDS = 'RECEIVE_CARDS'
 
-export function add(value) {
+export function add(card) {
   return {
     type: ADD_CARD,
-    value
+    card
   }
 }
 
