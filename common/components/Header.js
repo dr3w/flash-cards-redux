@@ -5,7 +5,7 @@ class Header extends Component {
   render() {
     return (
       <PageHeader>
-        Anki App
+        Flash Card App
       </PageHeader>
     )
   }
