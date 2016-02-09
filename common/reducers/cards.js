@@ -1,4 +1,4 @@
-import { ADD_CARD, SHOW_CARD, RECEIVE_CARDS } from '../actions/cards'
+import { ADD_CARD, SHOW_CARD, HIDE_CARD, RECEIVE_CARDS } from '../actions/cards'
 import card from './card'
 
 export default function cards(state = [], action) {
@@ -10,6 +10,11 @@ export default function cards(state = [], action) {
       return state.concat(action.cards)
 
     case SHOW_CARD:
+      return state.map(_card =>
+        card(_card, action)
+      )
+
+    case HIDE_CARD:
       return state.map(_card =>
         card(_card, action)
       )

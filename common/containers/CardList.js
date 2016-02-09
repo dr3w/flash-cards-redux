@@ -1,7 +1,7 @@
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import CardList from '../components/CardList'
-import * as CardListActions from '../actions/cards'
+import * as CardActions from '../actions/cards'
 
 function mapStateToProps(state) {
   return {
@@ -10,7 +10,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(CardListActions, dispatch)
+  return bindActionCreators(CardActions, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CardList)

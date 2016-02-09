@@ -1,4 +1,4 @@
-import { ADD_CARD, SHOW_CARD } from '../actions/cards'
+import { ADD_CARD, SHOW_CARD, HIDE_CARD } from '../actions/cards'
 
 export default function card(state, action) {
   switch (action.type) {
@@ -9,13 +9,15 @@ export default function card(state, action) {
       }
 
     case SHOW_CARD:
-      if (state.id !== action.id) {
-        return state
-      }
-
       return {
         ...state,
-        title: state.title + "!"
+        current: (state.id === action.id)
+      }
+
+    case HIDE_CARD:
+      return {
+        ...state,
+        current: false
       }
 
     default:

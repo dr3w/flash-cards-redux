@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import AddCard from '../components/AddCard'
+import Modal from '../components/Modal'
 import * as CardActions from '../actions/cards'
 
 function mapStateToProps(state) {
@@ -13,4 +13,4 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(CardActions, dispatch)
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddCard)
+export default connect(mapStateToProps, mapDispatchToProps)(Modal)

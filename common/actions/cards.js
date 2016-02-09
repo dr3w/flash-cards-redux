@@ -1,6 +1,7 @@
 import cardsApi from '../api/cards'
 export const ADD_CARD = 'ADD_CARD'
 export const SHOW_CARD = 'SHOW_CARD'
+export const HIDE_CARD = 'HIDE_CARD'
 export const RECEIVE_CARDS = 'RECEIVE_CARDS'
 
 export function add(card) {
@@ -13,6 +14,13 @@ export function add(card) {
 export function show(id) {
   return {
     type: SHOW_CARD,
+    id
+  }
+}
+
+  export function hide(id) {
+  return {
+    type: HIDE_CARD,
     id
   }
 }
