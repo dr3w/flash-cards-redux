@@ -7,10 +7,36 @@
   font-style: italic;
 }
 
-button, a {
-  outline: none;
+button, a, input, div, span {
+  outline: none !important;
 }
 
 .card-list {
   margin-top: 40px;
+}
+
+.button-section > *+* {
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+
+.button-section {
+  text-align: right;
+}
+
+.button-section-input {
+  text-align: right;
+}
+
+.button-section-input > * {
+  display: inline-block;
+}
+
+.button-section-top {
+  text-align: right;
+  margin-bottom:10px;
+}
+
+.page-header h1 {
+  cursor: pointer;
 }

@@ -3,10 +3,14 @@ import { PageHeader }  from 'react-bootstrap';
 
 class Header extends Component {
   render() {
+    const { push } = this.props
+
     return (
-      <PageHeader>
-        Flash Card App
-      </PageHeader>
+      <div>
+        <PageHeader onClick={push.bind(null, "/")}>
+          Flash Card App
+        </PageHeader>
+      </div>
     )
   }
 }
