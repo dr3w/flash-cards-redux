@@ -1,6 +1,14 @@
 Redux Flash Cards sample app
 =============
 
+**Run**
+
+```shell
+npm i
+npm start
+```
+
+
 **Features**
 
 + React
